@@ -1,0 +1,64 @@
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --text: #111;
+  --accent: #0077ff;
+}
+
+[data-theme="dark"] {
+  --bg: #0f2027;
+  --card: rgba(255,255,255,0.08);
+  --text: #fff;
+  --accent: #00c6ff;
+}
+
+body {
+  background: var(--bg);
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 700px;
+  margin: 10vh auto;
+  padding: 2rem;
+  background: var(--card);
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  position: relative;
+}
+
+textarea {
+  width: 100%;
+  height: 180px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: transparent;
+  color: var(--text);
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#result { margin-top: 1.5rem; font-size: 1.3rem; }
+
+.theme-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}

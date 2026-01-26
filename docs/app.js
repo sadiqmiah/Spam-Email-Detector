@@ -41,8 +41,8 @@ async function predict() {
 
     resultDiv.innerHTML =
       data.prediction === "spam"
-        ? "🚨 This looks like SPAM"
-        : "✅ This looks SAFE";
+        ? "🚨 This looks like SPAM (${data.confidence}% confidence)"
+        : "✅ This looks SAFE (${100 - data.confidence}% confidence)";
 
   } catch (error) {
     console.error(error);

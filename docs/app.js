@@ -21,6 +21,9 @@ toggle.addEventListener("click", () => {
 // Live API predict function
 async function predict() {
   const text = document.getElementById("emailText").value;
+  const loader = document.getElementById("loader");
+  loader.classList.remove("hidden");
+  resultDiv.innerHTML = "";
   const resultDiv = document.getElementById("result");
 
   if (!text.trim()) {

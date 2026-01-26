@@ -9,7 +9,7 @@ app = FastAPI(title="Spam Email Detector API")
 # ✅ CORS FIX
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # OK for demo/portfolio
+    allow_origins=["https://sadiqmiah.github.io"],  # Only allow your GitHub Pages site
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

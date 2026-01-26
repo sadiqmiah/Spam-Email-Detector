@@ -31,7 +31,7 @@ async function predict() {
   resultDiv.innerHTML = "⏳ Analyzing...";
 
   try {
-    const response = await fetch("https://spam-api.onrender.com/predict", {  // <-- your live API URL
+    const response = await fetch("https://spam-email-detector-ja5l.onrender.com/predict", {  // <-- your live API URL
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text })

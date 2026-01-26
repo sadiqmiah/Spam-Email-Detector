@@ -22,7 +22,7 @@ toggle.addEventListener("click", () => {
 async function predict() {
   const text = document.getElementById("emailText").value;
   const loader = document.getElementById("loader");
-  loader.classList.remove("hidden");
+  loader.classList.add("hidden");
   resultDiv.innerHTML = "";
   const resultDiv = document.getElementById("result");
 

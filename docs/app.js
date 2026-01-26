@@ -21,9 +21,6 @@ toggle.addEventListener("click", () => {
 // Live API predict function
 async function predict() {
   const text = document.getElementById("emailText").value;
-  const loader = document.getElementById("loader");
-  loader.classList.add("hidden");
-  resultDiv.innerHTML = "";
   const resultDiv = document.getElementById("result");
 
   if (!text.trim()) {
@@ -34,18 +31,21 @@ async function predict() {
   resultDiv.innerHTML = "⏳ Analyzing...";
 
   try {
-    const response = await fetch("https://spam-email-detector-ja5l.onrender.com/predict", {  // <-- your live API URL
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text })
-    });
+    const response = await fetch(
+      "https://spam-email-detector-ja5l.onrender.com/predict",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text })
+      }
+    );
 
     const data = await response.json();
 
     resultDiv.innerHTML =
       data.prediction === "spam"
-        ? "🚨 This looks like SPAM (${data.confidence}% confidence)"
-        : "✅ This looks SAFE (${100 - data.confidence}% confidence)";
+        ? "🚨 This looks like SPAM"
+        : "✅ This looks SAFE";
 
   } catch (error) {
     console.error(error);

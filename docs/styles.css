@@ -28,9 +28,9 @@ body {
   max-width: 700px;
   margin: 10vh auto;
   padding: 2rem;
-  background: var(--card);
+  background: #ffffff; /* fully opaque */
   border-radius: 14px;
-  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   position: relative;
   z-index: 1;
 }
@@ -42,6 +42,8 @@ body {
   position: relative;
   z-index: 1;
   margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.85); /* slightly see-through */
+  font-size: 0.95rem;
 }
 
 textarea {

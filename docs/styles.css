@@ -17,7 +17,7 @@ body {
   margin: 0;
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("sam_ai.jpg") center / cover no-repeat fixed;
+    url("spam_ai.jpg") center / cover no-repeat fixed;
   font-family: system-ui, sans-serif;
   color: var(--text);
   transition: background 0.3s, color 0.3s;

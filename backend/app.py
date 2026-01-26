@@ -15,6 +15,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Add a root route so visiting "/" doesn’t 404
+@app.get("/")
+def root():
+    return {"message": "Spam Email Detector API is running!"}
+
 # Load model and vectorizer
 model = joblib.load("model/svm_model.pkl")
 vectorizer = joblib.load("model/vectorizer.pkl")

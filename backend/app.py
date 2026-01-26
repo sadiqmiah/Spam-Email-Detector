@@ -32,12 +32,4 @@ def predict(email: Email):
     cleaned = clean_text(email.text)
     vec = vectorizer.transform([cleaned])
     prediction = model.predict(vec)[0]
-    probs = model.predict_proba(vec)[0]
-
-    spam_index = list(model.classes_).index("spam")
-    confidence = round(probs[spam_index] * 100, 2)
-
-    return {
-        "prediction": prediction,
-        "confidence": confidence
-    }
+    return {"prediction": prediction}

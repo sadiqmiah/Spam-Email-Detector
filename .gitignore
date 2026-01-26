@@ -1,0 +1,132 @@
+# ===============================
+# Byte-compiled / optimized / DLL files
+# ===============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# ===============================
+# Distribution / packaging
+# ===============================
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===============================
+# PyInstaller
+# ===============================
+*.manifest
+*.spec
+
+# ===============================
+# Installer logs
+# ===============================
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ===============================
+# Unit test / coverage reports
+# ===============================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# ===============================
+# Jupyter Notebook / IPython
+# ===============================
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ===============================
+# Python envs
+# ===============================
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pdm-python
+.pdm-build/
+.pixi
+__pypackages__/
+
+# ===============================
+# Environment / secrets
+# ===============================
+.env
+.env.local
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# OS / Editor
+# ===============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.ruff_cache/
+.pypirc
+.cursorignore
+.cursorindexingignore
+
+# ===============================
+# Docs / Sphinx
+# ===============================
+docs/_build/
+site/
+marimo/_static/
+marimo/_lsp/
+__marimo__/
+
+# ===============================
+# Node / frontend
+# ===============================
+node_modules/
+dist/
+build/
+
+# ===============================
+# ML / Data / Models
+# ===============================
+# Allow committing models for live backend
+!backend/model/*.pkl
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+nltk_data/
+.cache/
